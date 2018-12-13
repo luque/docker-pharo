@@ -13,5 +13,5 @@ RUN apt-get update -q && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD ./run-pharo.sh /bin/
-RUN chmod +x /bin/run-pharo.sh
-ENTRYPOINT ["/bin/run-pharo.sh"]
+ADD ./run-pharo-headless.sh /bin/
+RUN chmod +x /bin/run-pharo*.sh
